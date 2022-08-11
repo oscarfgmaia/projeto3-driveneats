@@ -12,6 +12,7 @@ body {
     height: 92px;
     width: 100%;
     display: flex;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     align-items: center;
     position: fixed;
     top: 0;
@@ -45,9 +46,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
-
 .CONTAINER-FOOD h1 {
     font-family: 'Righteous', cursive;
     font-size: 26px;
@@ -55,7 +55,42 @@ body {
     color: #333333;
     margin-left: 20px;
 }
+
+.CONTAINER-DRINK{
+    background-color: #E5E5E5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+.CONTAINER-DRINK h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    font-weight: 400;
+    color: #333333;
+    margin-left: 20px;
+}
+
+.CONTAINER-DESERT{
+    background-color: #E5E5E5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+.CONTAINER-DESERT h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    font-weight: 400;
+    color: #333333;
+    margin-left: 20px;
+}
+
 .container-plates{
+    box-sizing: border-box;
+    padding-bottom: 5px;
     display: flex;
     overflow-x: scroll;
 }
@@ -67,6 +102,8 @@ body {
     border-radius: 9px;
     margin-top: 20px;
     margin-left: 20px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0,0.5 )
+
 }
 
 .container-choice {
