@@ -13,13 +13,39 @@
         href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="./resources/images/hamburguer.ico" type="image/x-icon">
-
     <title>DrivenEats</title>
 
 </head>
 
 <body>
     <div class="site">
+        <div class="summary hidden">
+            <div class="confirm-order-container">
+                <div class="confirm-label">
+                    Confirme seu pedido
+                </div>
+                <div class="container-itens">
+                    <div class="item1">
+                        <span class="nome-prato">Frango Yin Yang</span>
+                        <span class="valor-prato">14,90</span>
+                    </div>
+                    <div class="item2">
+                        <span class="nome-prato">Coquinha gelada</span>
+                        <span class="valor-prato">4,90</span>
+                    </div>
+                    <div class="item3">
+                        <span class="nome-prato">Pudim</span>
+                        <span class="valor-prato">7,9</span>
+                    </div>
+                    <div class="total">
+                        <span>TOTAL</span>
+                        <span class="valor-total">27,70</span>
+                    </div>
+                </div>
+                <div class="accept-order">Tudo certo, pode pedir!</div>
+                <div class="cancel-order">Cancelar</div>
+            </div>
+        </div>
         <div class="header">
             <div class="header-marca">
                 <h1>DrivenEats</h1>
@@ -34,8 +60,9 @@
                 <h1>Primeiro, seu prato</h1>
             </div>
             <div class="container-plates">
+
                 <div class="choosed-plate">
-                    <div class="container-choice">
+                    <div class="container-choice comida comida1" onclick="selectOptionFood('.comida1')">
                         <div class="plate-image">
                             <img src="./resources/images/comida1.png" alt="">
                         </div>
@@ -53,9 +80,9 @@
                 </div>
 
                 <div class="choosed-plate">
-                    <div class="container-choice">
+                    <div class="container-choice comida comida2" onclick="selectOptionFood('.comida2')">
                         <div class="plate-image">
-                            <img src="./resources/images/comida1.png" alt="">
+                            <img src="./resources/images/comida2.png" alt="">
                         </div>
                         <div class="plate-name">
                             Frango Yin Yang
@@ -71,9 +98,9 @@
                 </div>
 
                 <div class="choosed-plate">
-                    <div class="container-choice">
+                    <div class="container-choice comida comida3" onclick="selectOptionFood('.comida3')">
                         <div class="plate-image">
-                            <img src="./resources/images/comida1.png" alt="">
+                            <img src="./resources/images/comida3.png" alt="">
                         </div>
                         <div class="plate-name">
                             Frango Yin Yang
@@ -89,9 +116,9 @@
                 </div>
 
                 <div class="choosed-plate">
-                    <div class="container-choice">
+                    <div class="container-choice comida comida4" onclick="selectOptionFood('.comida4')">
                         <div class="plate-image">
-                            <img src="./resources/images/comida1.png" alt="">
+                            <img src="./resources/images/comida4.png" alt="">
                         </div>
                         <div class="plate-name">
                             Frango Yin Yang
@@ -105,6 +132,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -114,7 +142,7 @@
             </div>
             <div class="container-plates">
                 <div class="choosed-plate">
-                    <div class="container-choice">
+                    <div class="container-choice drink drink1" onclick="selectOptionDrink('.drink1')">
                         <div class="plate-image">
                             <img src="./resources/images/bebida1.png" alt="">
                         </div>
@@ -132,9 +160,9 @@
                 </div>
 
                 <div class="choosed-plate">
-                    <div class="container-choice">
+                    <div class="container-choice drink drink2" onclick="selectOptionDrink('.drink2')">
                         <div class="plate-image">
-                            <img src="./resources/images/bebida1.png" alt="">
+                            <img src="./resources/images/bebida2.png" alt="">
                         </div>
                         <div class="plate-name">
                             Frango Yin Yang
@@ -150,9 +178,9 @@
                 </div>
 
                 <div class="choosed-plate">
-                    <div class="container-choice">
+                    <div class="container-choice drink drink3" onclick="selectOptionDrink('.drink3')">
                         <div class="plate-image">
-                            <img src="./resources/images/bebida1.png" alt="">
+                            <img src="./resources/images/bebida3.png" alt="">
                         </div>
                         <div class="plate-name">
                             Frango Yin Yang
@@ -168,9 +196,9 @@
                 </div>
 
                 <div class="choosed-plate">
-                    <div class="container-choice">
+                    <div class="container-choice drink drink4" onclick="selectOptionDrink('.drink4')">
                         <div class="plate-image">
-                            <img src="./resources/images/bebida1.png" alt="">
+                            <img src="./resources/images/bebida4.png" alt="">
                         </div>
                         <div class="plate-name">
                             Frango Yin Yang
@@ -193,7 +221,7 @@
             </div>
             <div class="container-plates">
                 <div class="choosed-plate">
-                    <div class="container-choice">
+                    <div class="container-choice dessert dessert1" onclick="selectOptionDessert('.dessert1')">
                         <div class="plate-image">
                             <img src="./resources/images/sobremesa1.png" alt="">
                         </div>
@@ -211,9 +239,9 @@
                 </div>
 
                 <div class="choosed-plate">
-                    <div class="container-choice">
+                    <div class="container-choice dessert dessert2" onclick="selectOptionDessert('.dessert2')">
                         <div class="plate-image">
-                            <img src="./resources/images/sobremesa1.png" alt="">
+                            <img src="./resources/images/sobremesa2.png" alt="">
                         </div>
                         <div class="plate-name">
                             Frango Yin Yang
@@ -229,9 +257,9 @@
                 </div>
 
                 <div class="choosed-plate">
-                    <div class="container-choice">
+                    <div class="container-choice dessert dessert3" onclick="selectOptionDessert('.dessert3')">
                         <div class="plate-image">
-                            <img src="./resources/images/sobremesa1.png" alt="">
+                            <img src="./resources/images/sobremesa3.png" alt="">
                         </div>
                         <div class="plate-name">
                             Frango Yin Yang
@@ -247,9 +275,9 @@
                 </div>
 
                 <div class="choosed-plate">
-                    <div class="container-choice">
+                    <div class="container-choice dessert dessert4" onclick="selectOptionDessert('.dessert4')">
                         <div class="plate-image">
-                            <img src="./resources/images/sobremesa1.png" alt="">
+                            <img src="./resources/images/sobremesa4.png" alt="">
                         </div>
                         <div class="plate-name">
                             Frango Yin Yang
@@ -265,17 +293,17 @@
                 </div>
             </div>
         </div>
-
         <div class="footer-space"></div>
         <div class="footer">
-            <div class="order">
+            <div class="order" onclick="makeOrder()">
                 <h1>Selecione os 3 itens <br> para fechar o pedido</h1>
             </div>
         </div>
+
+
     </div>
 
-    <script>
-    document.getElementByClass("choosed-plate").style.borderColor = "green purple";</script>
+    <script src="./js/script.js">    </script>
 </body>
 
 </html>

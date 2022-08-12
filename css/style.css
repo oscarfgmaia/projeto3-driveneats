@@ -4,10 +4,13 @@ body {
 
 .site {
     background-color: #E5E5E5;
+    width: 100%;
+    height: 100%;
 
 }
 
 .header {
+    box-sizing: border-box;
     background-color: #CF2B2B;
     height: 92px;
     width: 100%;
@@ -21,6 +24,7 @@ body {
 }
 
 .header-marca {
+    box-sizing: border-box;
     margin-left: 20px;
 }
 
@@ -41,6 +45,7 @@ body {
     width: 100%;
 }
 .CONTAINER-FOOD {
+    display: none;
     background-color: #E5E5E5;
     width: 100%;
     display: flex;
@@ -119,6 +124,13 @@ body {
 .plate-image{
     width: 144px;
     height: 87px;
+    
+}
+.plate-image img{
+    width: 144px;
+    height: 87px;
+    border-radius: 9px;
+    object-fit:cover;
 }
 
 .plate-name{
@@ -134,7 +146,7 @@ body {
     font-weight: 300;
     margin-top: 10px;
     width: 144px;
-    height: 150px;
+    height: 50px;
 }
 
 .price-container {
@@ -150,6 +162,7 @@ body {
 
 
 .order {
+    box-sizing: border-box;
     background-color: #CBCBCB;
     color: white;
     width: 364px;
@@ -181,4 +194,80 @@ body {
     margin-top: 30px;
     height: 92px;
     width: 100%;
+}
+
+
+.selecionado{
+    border:5px solid #32B72F;
+    border-radius: 9px;
+}
+
+.can-order{
+    background-color: #32B72F;
+}
+
+.summary{
+    background-color: #FFFFFFE5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+.confirm-order-container{
+    background-color: #50D074;
+    box-sizing: border-box;
+    width: 100%;
+    height: 353px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+.confirm-label, .cancel-order, .accept-order{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    color:white;
+}
+.accept-order{
+    background-color: white;
+    color: #50D074;
+    width: 90%;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+}
+.item1, .item2, .item3, .total{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 400;
+    color: white;
+}
+.total{
+    font-weight: 700;
+}
+.container-itens{
+    box-sizing: border-box;
+    width: 90%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.hidden{
+    display: none;
 }
