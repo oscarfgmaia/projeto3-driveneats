@@ -157,7 +157,6 @@ function refreshSummary(){
     let totalValueStr = totalValue.toFixed(2).toString()
 
     summaryValueTotal.innerHTML = totalValueStr.replaceAll('.',',');
-
 }
 
 function makeOrder(){
@@ -166,11 +165,23 @@ function makeOrder(){
         navigate.classList.remove('hidden');
         getOrder();
         refreshSummary();
-
     }
 }
 
 function backToMainScreen(){
     let temp = document.querySelector('.summary');
     temp.classList.add('hidden');
+}
+
+function acceptOrder(){
+    
+let orderStr = `Olá, gostaria de fazer o pedido:
+- Prato: ${plateOrder.toString()}
+- Bebida: ${drinkOrder}
+- Sobremesa: ${dessertOrder}
+Total: R$ ${totalValue}`;
+let uri = orderStr;
+let orderEncoded = encodeURIComponent(uri);
+let whatsapp = "https://wa.me/5581999252520?text="+orderEncoded;
+window.open(whatsapp,'_balnk').focus();
 }
