@@ -2,6 +2,10 @@ let plates = getPlates();
 let drinks = getDrinks();
 let desserts = getDesserts();
 let order = document.querySelector('.order');
+let plateOrder;
+let drinkOrder;
+let dessertOrder;
+let totalValue;
 
 function getPlates() {
     return document.getElementsByClassName('container-choice comida');
@@ -63,7 +67,7 @@ function selectOptionFood(value) {
     }
 
     selected.classList.add('selecionado');
-
+    
     if (checkOrder() == true){
         canOrder();
     }
@@ -104,9 +108,30 @@ function canOrder(){
     order.innerHTML = "Fechar pedido";
 }
 
+function getOrder(element){
+    for(i=0;i<plates.length;i++){
+        if(plates[i].classList.contains('selecionado')){
+            plateOrder = plates[i].children.innerHTML;
+        }
+    }
+
+    for(i=0;i<drinks.length;i++){
+        if(drinks[i].classList.contains('selecionado')){
+            drinkOrder = drinks[i].innerHTML;
+        }
+    }
+
+    for(i=0;i<desserts.length;i++){
+        if(desserts[i].classList.contains('selecionado')){
+            dessertOrder = desserts[i].innerHTML;
+        }
+    }
+}
+
 function makeOrder(){
     if (order.classList.contains('can-order')){
         let navigate = document.querySelector('.hidden')
         navigate.classList.remove('hidden');
+
     }
 }
