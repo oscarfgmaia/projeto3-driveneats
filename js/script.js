@@ -24,7 +24,7 @@ function getSelections() {
     return document.getElementsByClassName('selecionado');
 }
 
-function checkPlate(){
+function checkPlate() {
     for (i = 0; i < plates.length; i++) {
         if (plates[i].classList.contains('selecionado')) {
             return true;
@@ -33,7 +33,7 @@ function checkPlate(){
     return false;
 }
 
-function checkDrink(){
+function checkDrink() {
     for (i = 0; i < drinks.length; i++) {
         if (drinks[i].classList.contains('selecionado')) {
             return true;
@@ -42,7 +42,7 @@ function checkDrink(){
     return false;
 }
 
-function checkDessert(){
+function checkDessert() {
     for (i = 0; i < desserts.length; i++) {
         if (desserts[i].classList.contains('selecionado')) {
             return true;
@@ -51,11 +51,11 @@ function checkDessert(){
     return false;
 }
 
-function checkOrder(){
-    if(checkPlate()==true && checkDrink()==true && checkDessert()==true){
+function checkOrder() {
+    if (checkPlate() == true && checkDrink() == true && checkDessert() == true) {
         return true;
     }
-    else{
+    else {
         return false;
     }
 }
@@ -66,15 +66,26 @@ function selectOptionFood(value) {
     for (i = 0; i < plates.length; i++) {
         if (plates[i].classList.contains('selecionado')) {
             plates[i].classList.remove('selecionado');
+            let a = plates[i].querySelector('.check')
+            a.classList.add('hidden')
         }
     }
-
     selected.classList.add('selecionado');
-    
-    if (checkOrder() == true){
+    let b = selected.querySelector('.hidden')
+    b.classList.remove('hidden')
+
+    if (checkOrder() == true) {
         canOrder();
     }
 }
+
+
+function createCheckMark() {
+    let a = document.createElement('ion-icon'); // generate node
+    a.setAttribute('name', 'checkmark-circle');         // set attribute
+    selected.appendChild(a);        // use the node
+}
+
 
 function selectOptionDrink(value) {
     const selected = document.querySelector(value);
@@ -82,11 +93,16 @@ function selectOptionDrink(value) {
     for (i = 0; i < drinks.length; i++) {
         if (drinks[i].classList.contains('selecionado')) {
             drinks[i].classList.remove('selecionado');
+            let a = drinks[i].querySelector('.check')
+            a.classList.add('hidden')
         }
     }
+    selected.classList.add('selecionado');
+    let b = selected.querySelector('.hidden')
+    b.classList.remove('hidden')
 
     selected.classList.add('selecionado');
-    if (checkOrder() == true){
+    if (checkOrder() == true) {
         canOrder();
     }
 }
@@ -97,44 +113,46 @@ function selectOptionDessert(value) {
     for (i = 0; i < desserts.length; i++) {
         if (desserts[i].classList.contains('selecionado')) {
             desserts[i].classList.remove('selecionado');
+            let a = desserts[i].querySelector('.check')
+            a.classList.add('hidden')
         }
     }
-
     selected.classList.add('selecionado');
-
-    if (checkOrder() == true){
+    let b = selected.querySelector('.hidden')
+    b.classList.remove('hidden')
+    if (checkOrder() == true) {
         canOrder();
     }
 }
-function canOrder(){
+function canOrder() {
     order.classList.add('can-order');
     order.innerHTML = "Fechar pedido";
 }
 
-function getOrder(element){
-    for(i=0;i<plates.length;i++){
-        if(plates[i].classList.contains('selecionado')){
-            plateOrder =plates[i].getElementsByTagName('div')[1].innerHTML;
-            platePrice =plates[i].getElementsByTagName('div')[3].querySelector('.price').innerHTML;
+function getOrder(element) {
+    for (i = 0; i < plates.length; i++) {
+        if (plates[i].classList.contains('selecionado')) {
+            plateOrder = plates[i].getElementsByTagName('div')[1].innerHTML;
+            platePrice = plates[i].getElementsByTagName('div')[3].querySelector('.price').innerHTML;
         }
     }
 
-    for(i=0;i<drinks.length;i++){
-        if(drinks[i].classList.contains('selecionado')){
+    for (i = 0; i < drinks.length; i++) {
+        if (drinks[i].classList.contains('selecionado')) {
             drinkOrder = drinks[i].getElementsByTagName('div')[1].innerHTML;
-            drinkPrice =drinks[i].getElementsByTagName('div')[3].querySelector('.price').innerHTML;
+            drinkPrice = drinks[i].getElementsByTagName('div')[3].querySelector('.price').innerHTML;
         }
     }
 
-    for(i=0;i<desserts.length;i++){
-        if(desserts[i].classList.contains('selecionado')){
+    for (i = 0; i < desserts.length; i++) {
+        if (desserts[i].classList.contains('selecionado')) {
             dessertOrder = desserts[i].getElementsByTagName('div')[1].innerHTML;
-            dessertPrice =desserts[i].getElementsByTagName('div')[3].querySelector('.price').innerHTML;            
+            dessertPrice = desserts[i].getElementsByTagName('div')[3].querySelector('.price').innerHTML;
         }
     }
 }
 
-function refreshSummary(){
+function refreshSummary() {
     let summaryItem = document.querySelector('.item1');
     summaryItem.getElementsByTagName('span')[0].innerHTML = plateOrder;
     summaryItem.getElementsByTagName('span')[1].innerHTML = platePrice;
@@ -146,21 +164,21 @@ function refreshSummary(){
     summaryItem = document.querySelector('.item3');
     summaryItem.getElementsByTagName('span')[0].innerHTML = dessertOrder;
     summaryItem.getElementsByTagName('span')[1].innerHTML = dessertPrice;
-    
 
-    platePrice = Number(platePrice.replaceAll(',','.'));
-    drinkPrice = Number(drinkPrice.replaceAll(',','.'));
-    dessertPrice = Number(dessertPrice.replaceAll(',','.'));
+
+    platePrice = Number(platePrice.replaceAll(',', '.'));
+    drinkPrice = Number(drinkPrice.replaceAll(',', '.'));
+    dessertPrice = Number(dessertPrice.replaceAll(',', '.'));
 
     let summaryValueTotal = document.querySelector('.valor-total');
-    totalValue = platePrice+drinkPrice+dessertPrice;
+    totalValue = platePrice + drinkPrice + dessertPrice;
     let totalValueStr = totalValue.toFixed(2).toString()
 
-    summaryValueTotal.innerHTML = totalValueStr.replaceAll('.',',');
+    summaryValueTotal.innerHTML = totalValueStr.replaceAll('.', ',');
 }
 
-function makeOrder(){
-    if (order.classList.contains('can-order')){
+function makeOrder() {
+    if (order.classList.contains('can-order')) {
         let navigate = document.querySelector('.hidden')
         navigate.classList.remove('hidden');
         getOrder();
@@ -168,20 +186,20 @@ function makeOrder(){
     }
 }
 
-function backToMainScreen(){
+function backToMainScreen() {
     let temp = document.querySelector('.summary');
     temp.classList.add('hidden');
 }
 
-function acceptOrder(){
-    
-let orderStr = `Olá, gostaria de fazer o pedido:
+function acceptOrder() {
+    let totalValueStr = totalValue.toFixed(2).toString();
+    let orderStr = `Olá, gostaria de fazer o pedido:
 - Prato: ${plateOrder.toString()}
 - Bebida: ${drinkOrder}
 - Sobremesa: ${dessertOrder}
-Total: R$ ${totalValue}`;
-let uri = orderStr;
-let orderEncoded = encodeURIComponent(uri);
-let whatsapp = "https://wa.me/5581999252520?text="+orderEncoded;
-window.open(whatsapp,'_balnk').focus();
+Total: R$ ${totalValueStr}`;
+    let uri = orderStr;
+    let orderEncoded = encodeURIComponent(uri);
+    let whatsapp = "https://wa.me/5581999252520?text=" + orderEncoded;
+    window.open(whatsapp, '_blank').focus();
 }

@@ -45,7 +45,8 @@ body {
     width: 100%;
 }
 .CONTAINER-FOOD {
-    display: none;
+    box-sizing: border-box;
+    padding-right: 20px;
     background-color: #E5E5E5;
     width: 100%;
     display: flex;
@@ -62,6 +63,8 @@ body {
 }
 
 .CONTAINER-DRINK{
+    box-sizing: border-box;
+    padding-right: 20px;
     background-color: #E5E5E5;
     width: 100%;
     display: flex;
@@ -78,6 +81,8 @@ body {
 }
 
 .CONTAINER-DESERT{
+    box-sizing: border-box;
+    padding-right: 20px;
     background-color: #E5E5E5;
     width: 100%;
     display: flex;
@@ -101,6 +106,8 @@ body {
 }
 
 .choosed-plate {
+    position: relative;
+    box-sizing: border-box;
     width: 172px;
     height: 216px;
     background-color: white;
@@ -109,6 +116,13 @@ body {
     margin-left: 20px;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0,0.5 )
 
+}
+ion-icon{
+    position: absolute;
+    font-size: 19px;
+    bottom: 14px;
+    right: 10px;
+    color: #32B72F;
 }
 
 .container-choice {
