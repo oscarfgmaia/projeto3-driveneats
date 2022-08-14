@@ -9,6 +9,8 @@ let platePrice;
 let drinkPrice;
 let dessertPrice;
 let totalValue;
+let personalName;
+let personalAddress;
 
 function getPlates() {
     return document.getElementsByClassName('container-choice comida');
@@ -189,17 +191,29 @@ function makeOrder() {
 function backToMainScreen() {
     let temp = document.querySelector('.summary');
     temp.classList.add('hidden');
+    temp = document.querySelector('.personal-info');
+    temp.classList.add('hidden');
 }
 
 function acceptOrder() {
     let totalValueStr = totalValue.toFixed(2).toString();
+    personalName = document.getElementById("personal-name").value;
+    personalAddress = document.getElementById("personal-address").value;
     let orderStr = `Olá, gostaria de fazer o pedido:
 - Prato: ${plateOrder.toString()}
 - Bebida: ${drinkOrder}
 - Sobremesa: ${dessertOrder}
-Total: R$ ${totalValueStr}`;
+Total: R$ ${totalValueStr}
+
+Nome: ${personalName}
+Endereço: ${personalAddress}`;
     let uri = orderStr;
     let orderEncoded = encodeURIComponent(uri);
     let whatsapp = "https://wa.me/5581999252520?text=" + orderEncoded;
     window.open(whatsapp, '_blank').focus();
+}
+function askPersonalInfo(){
+    let temp = document.querySelector('.personal-info')
+    temp.classList.remove('hidden')
+
 }

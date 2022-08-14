@@ -42,10 +42,31 @@
                         <span class="valor-total">27,70</span>
                     </div>
                 </div>
+                <div class="accept-order" onclick="askPersonalInfo()">Tudo certo, pode pedir!</div>
+                <div class="cancel-order" onclick="backToMainScreen()">Cancelar</div>
+            </div>
+        </div>
+
+        <div class="personal-info hidden">
+            <div class="confirm-order-container">
+                <div class="confirm-label">
+                    Confirme seus dados
+                </div>
+                <div class="info-container">
+                    <div class="container-personal-info">
+                        <div class="personal-name">
+                            <input type="text" name="personal-name" id="personal-name" placeholder="Insira seu nome:">
+                        </div>
+                        <div class="personal-address">
+                            <input type="text" name="personal-address" id="personal-address" placeholder="Insira seu endereço:">
+                        </div>
+                    </div>
+                </div>
                 <div class="accept-order" onclick="acceptOrder()">Tudo certo, pode pedir!</div>
                 <div class="cancel-order" onclick="backToMainScreen()">Cancelar</div>
             </div>
         </div>
+
         <div class="header">
             <div class="header-marca">
                 <h1>DrivenEats</h1>

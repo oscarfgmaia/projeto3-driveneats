@@ -40,10 +40,12 @@ body {
     font-size: 18px;
     color: white;
 }
-.header-space{
+
+.header-space {
     height: 92px;
     width: 100%;
 }
+
 .CONTAINER-FOOD {
     box-sizing: border-box;
     padding-right: 20px;
@@ -54,6 +56,7 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
+
 .CONTAINER-FOOD h1 {
     font-family: 'Righteous', cursive;
     font-size: 26px;
@@ -62,7 +65,7 @@ body {
     margin-left: 20px;
 }
 
-.CONTAINER-DRINK{
+.CONTAINER-DRINK {
     box-sizing: border-box;
     padding-right: 20px;
     background-color: #E5E5E5;
@@ -72,6 +75,7 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
+
 .CONTAINER-DRINK h1 {
     font-family: 'Righteous', cursive;
     font-size: 26px;
@@ -80,7 +84,7 @@ body {
     margin-left: 20px;
 }
 
-.CONTAINER-DESERT{
+.CONTAINER-DESERT {
     box-sizing: border-box;
     padding-right: 20px;
     background-color: #E5E5E5;
@@ -90,6 +94,7 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
+
 .CONTAINER-DESERT h1 {
     font-family: 'Righteous', cursive;
     font-size: 26px;
@@ -98,7 +103,7 @@ body {
     margin-left: 20px;
 }
 
-.container-plates{
+.container-plates {
     box-sizing: border-box;
     padding-bottom: 5px;
     display: flex;
@@ -114,10 +119,10 @@ body {
     border-radius: 9px;
     margin-top: 20px;
     margin-left: 20px;
-    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0,0.5 )
-
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.5)
 }
-ion-icon{
+
+ion-icon {
     position: absolute;
     font-size: 19px;
     bottom: 14px;
@@ -135,25 +140,28 @@ ion-icon{
     align-items: center;
     justify-content: space-between;
 }
-.plate-image{
+
+.plate-image {
     width: 144px;
     height: 87px;
-    
+
 }
-.plate-image img{
+
+.plate-image img {
     width: 144px;
     height: 87px;
     border-radius: 9px;
-    object-fit:cover;
+    object-fit: cover;
 }
 
-.plate-name{
+.plate-name {
     margin-top: 10px;
     font-weight: 700;
     font-size: 16px;
-    width: 144px;    
+    width: 144px;
 }
-.plate-description{
+
+.plate-description {
     display: flex;
     box-sizing: border-box;
     font-size: 15px;
@@ -170,7 +178,8 @@ ion-icon{
     font-weight: 500;
     font-size: 16px;
 }
-.price{
+
+.price {
     margin-left: 2px;
 }
 
@@ -204,23 +213,24 @@ ion-icon{
     z-index: 1;
 
 }
-.footer-space{
+
+.footer-space {
     margin-top: 30px;
     height: 92px;
     width: 100%;
 }
 
 
-.selecionado{
-    border:5px solid #32B72F;
+.selecionado {
+    border: 5px solid #32B72F;
     border-radius: 9px;
 }
 
-.can-order{
+.can-order {
     background-color: #32B72F;
 }
 
-.summary{
+.summary {
     background-color: #FFFFFFE5;
     height: 100%;
     width: 100%;
@@ -230,7 +240,19 @@ ion-icon{
     position: fixed;
     z-index: 2;
 }
-.confirm-order-container{
+
+.personal-info {
+    background-color: #FFFFFFE5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+
+.confirm-order-container {
     background-color: #50D074;
     box-sizing: border-box;
     width: 100%;
@@ -241,17 +263,21 @@ ion-icon{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items:center;
+    align-items: center;
 }
-.confirm-label, .cancel-order, .accept-order{
+
+.confirm-label,
+.cancel-order,
+.accept-order {
     height: 40px;
     display: flex;
     align-items: center;
     font-size: 22px;
     font-weight: 700;
-    color:white;
+    color: white;
 }
-.accept-order{
+
+.accept-order {
     background-color: white;
     color: #50D074;
     width: 90%;
@@ -261,7 +287,11 @@ ion-icon{
     align-items: center;
     border-radius: 80px;
 }
-.item1, .item2, .item3, .total{
+
+.item1,
+.item2,
+.item3,
+.total {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -270,10 +300,12 @@ ion-icon{
     font-weight: 400;
     color: white;
 }
-.total{
+
+.total {
     font-weight: 700;
 }
-.container-itens{
+
+.container-itens {
     box-sizing: border-box;
     width: 90%;
     height: 150px;
@@ -282,6 +314,50 @@ ion-icon{
     justify-content: space-between;
     align-items: center;
 }
-.hidden{
+
+.info-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container-personal-info {
+
+    box-sizing: border-box;
+    width: 90%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.personal-name{
+
+    width: 100%;
+}
+.personal-address{
+
+    width: 100%;
+}
+
+.container-personal-info input {
+    padding:5px 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 80px;
+    border:none;
+    border-width:0px;
+    outline:none;
+    color: #50D074;
+    font-weight: bold;
+}
+input:placeholder-shown{
+    font-weight: 400;
+}
+
+.hidden {
     display: none;
 }
