@@ -58,11 +58,12 @@
                             <input type="text" name="personal-name" id="personal-name" placeholder="Insira seu nome:">
                         </div>
                         <div class="personal-address">
-                            <input type="text" name="personal-address" id="personal-address" placeholder="Insira seu endereço:">
+                            <input type="text" name="personal-address" id="personal-address"
+                                placeholder="Insira seu endereço:">
                         </div>
                     </div>
                 </div>
-                <div class="accept-order" onclick="acceptOrder()">Tudo certo, pode pedir!</div>
+                <div class="accept-order" onclick="acceptOrder()">Finalizar pedido!</div>
                 <div class="cancel-order" onclick="backToMainScreen()">Cancelar</div>
             </div>
         </div>
@@ -81,9 +82,8 @@
                 <h1>Primeiro, seu prato</h1>
             </div>
             <div class="container-plates">
-
-                <div class="choosed-plate">
-                    <div class="container-choice comida comida1" onclick="selectOptionFood('.comida1')">
+                <div class="choosed-plate comida comida1">
+                    <div class="container-choice" onclick="selectOptionFood('.comida1')">
                         <div class="plate-image">
                             <img src="./resources/images/comida1.png" alt="">
                         </div>
@@ -99,8 +99,8 @@
                     </div>
                 </div>
 
-                <div class="choosed-plate">
-                    <div class="container-choice comida comida2" onclick="selectOptionFood('.comida2')">
+                <div class="choosed-plate comida comida2">
+                    <div class="container-choice" onclick="selectOptionFood('.comida2')">
                         <div class="plate-image">
                             <img src="./resources/images/comida2.png" alt="">
                         </div>
@@ -116,13 +116,13 @@
                     </div>
                 </div>
 
-                <div class="choosed-plate">
-                    <div class="container-choice comida comida3" onclick="selectOptionFood('.comida3')">
+                <div class="choosed-plate comida comida3">
+                    <div class="container-choice" onclick="selectOptionFood('.comida3')">
                         <div class="plate-image">
                             <img src="./resources/images/comida3.png" alt="">
                         </div>
                         <div class="plate-name">Lagostas</div>
-                        <div class="plate-description">Lagostas com batatas grelhadas e molho da casa</div>
+                        <div class="plate-description">Lagostas com batatas grelhadas ao molho da casa</div>
                         <div class="price-container">
                             <div class="coin">R$</div>
                             <div class="price">42,90</div>
@@ -133,8 +133,8 @@
                     </div>
                 </div>
 
-                <div class="choosed-plate">
-                    <div class="container-choice comida comida4" onclick="selectOptionFood('.comida4')">
+                <div class="choosed-plate comida comida4">
+                    <div class="container-choice" onclick="selectOptionFood('.comida4')">
                         <div class="plate-image">
                             <img src="./resources/images/comida4.png" alt="">
                         </div>
@@ -158,8 +158,8 @@
                 <h1>Agora, sua bebida</h1>
             </div>
             <div class="container-plates">
-                <div class="choosed-plate">
-                    <div class="container-choice drink drink1" onclick="selectOptionDrink('.drink1')">
+                <div class="choosed-plate drink drink1">
+                    <div class="container-choice" onclick="selectOptionDrink('.drink1')">
                         <div class="plate-image">
                             <img src="./resources/images/bebida1.png" alt="">
                         </div>
@@ -175,8 +175,8 @@
                     </div>
                 </div>
 
-                <div class="choosed-plate">
-                    <div class="container-choice drink drink2" onclick="selectOptionDrink('.drink2')">
+                <div class="choosed-plate drink drink2">
+                    <div class="container-choice" onclick="selectOptionDrink('.drink2')">
                         <div class="plate-image">
                             <img src="./resources/images/bebida2.png" alt="">
                         </div>
@@ -192,8 +192,8 @@
                     </div>
                 </div>
 
-                <div class="choosed-plate">
-                    <div class="container-choice drink drink3" onclick="selectOptionDrink('.drink3')">
+                <div class="choosed-plate drink drink3">
+                    <div class="container-choice" onclick="selectOptionDrink('.drink3')">
                         <div class="plate-image">
                             <img src="./resources/images/bebida3.png" alt="">
                         </div>
@@ -209,13 +209,13 @@
                     </div>
                 </div>
 
-                <div class="choosed-plate">
-                    <div class="container-choice drink drink4" onclick="selectOptionDrink('.drink4')">
+                <div class="choosed-plate drink drink4">
+                    <div class="container-choice" onclick="selectOptionDrink('.drink4')">
                         <div class="plate-image">
                             <img src="./resources/images/bebida4.png" alt="">
                         </div>
                         <div class="plate-name">Capiroska</div>
-                        <div class="plate-description">Caipiroska de Limão - Vodka Absolut</div>
+                        <div class="plate-description">Sabor Limão - 350ml <br></div>
                         <div class="price-container">
                             <div class="coin">R$</div>
                             <div class="price">18,90</div>
@@ -233,8 +233,8 @@
                 <h1>Por fim, sua sobremesa</h1>
             </div>
             <div class="container-plates">
-                <div class="choosed-plate">
-                    <div class="container-choice dessert dessert1" onclick="selectOptionDessert('.dessert1')">
+                <div class="choosed-plate dessert dessert1">
+                    <div class="container-choice" onclick="selectOptionDessert('.dessert1')">
                         <div class="plate-image">
                             <img src="./resources/images/sobremesa1.png" alt="">
                         </div>
@@ -250,8 +250,8 @@
                     </div>
                 </div>
 
-                <div class="choosed-plate">
-                    <div class="container-choice dessert dessert2" onclick="selectOptionDessert('.dessert2')">
+                <div class="choosed-plate dessert dessert2">
+                    <div class="container-choice" onclick="selectOptionDessert('.dessert2')">
                         <div class="plate-image">
                             <img src="./resources/images/sobremesa2.png" alt="">
                         </div>
@@ -267,8 +267,8 @@
                     </div>
                 </div>
 
-                <div class="choosed-plate">
-                    <div class="container-choice dessert dessert3" onclick="selectOptionDessert('.dessert3')">
+                <div class="choosed-plate dessert dessert3">
+                    <div class="container-choice" onclick="selectOptionDessert('.dessert3')">
                         <div class="plate-image">
                             <img src="./resources/images/sobremesa3.png" alt="">
                         </div>
@@ -284,8 +284,8 @@
                     </div>
                 </div>
 
-                <div class="choosed-plate">
-                    <div class="container-choice dessert dessert4" onclick="selectOptionDessert('.dessert4')">
+                <div class="choosed-plate dessert dessert4">
+                    <div class="container-choice" onclick="selectOptionDessert('.dessert4')">
                         <div class="plate-image">
                             <img src="./resources/images/sobremesa4.png" alt="">
                         </div>

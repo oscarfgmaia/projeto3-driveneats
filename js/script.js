@@ -13,15 +13,17 @@ let personalName;
 let personalAddress;
 
 function getPlates() {
-    return document.getElementsByClassName('container-choice comida');
+    return document.getElementsByClassName('choosed-plate comida');
 }
 
 function getDrinks() {
-    return document.getElementsByClassName('container-choice drink');
+    return document.getElementsByClassName('choosed-plate drink');
 }
+
 function getDesserts() {
-    return document.getElementsByClassName('container-choice dessert');
+    return document.getElementsByClassName('choosed-plate dessert');
 }
+
 function getSelections() {
     return document.getElementsByClassName('selecionado');
 }
@@ -81,13 +83,11 @@ function selectOptionFood(value) {
     }
 }
 
-
 function createCheckMark() {
     let a = document.createElement('ion-icon'); // generate node
     a.setAttribute('name', 'checkmark-circle');         // set attribute
     selected.appendChild(a);        // use the node
 }
-
 
 function selectOptionDrink(value) {
     const selected = document.querySelector(value);
@@ -134,22 +134,25 @@ function canOrder() {
 function getOrder(element) {
     for (i = 0; i < plates.length; i++) {
         if (plates[i].classList.contains('selecionado')) {
-            plateOrder = plates[i].getElementsByTagName('div')[1].innerHTML;
-            platePrice = plates[i].getElementsByTagName('div')[3].querySelector('.price').innerHTML;
+            plateOrder = plates[i].getElementsByTagName('div')[0].getElementsByTagName('div')[1].innerHTML;
+            platePrice = plates[i].getElementsByTagName('div')[0].getElementsByTagName('div')[5].innerHTML;
+
         }
     }
 
     for (i = 0; i < drinks.length; i++) {
         if (drinks[i].classList.contains('selecionado')) {
-            drinkOrder = drinks[i].getElementsByTagName('div')[1].innerHTML;
-            drinkPrice = drinks[i].getElementsByTagName('div')[3].querySelector('.price').innerHTML;
+            drinkOrder = drinks[i].getElementsByTagName('div')[0].getElementsByTagName('div')[1].innerHTML;
+            drinkPrice = drinks[i].getElementsByTagName('div')[0].getElementsByTagName('div')[5].innerHTML;
+
         }
     }
 
     for (i = 0; i < desserts.length; i++) {
         if (desserts[i].classList.contains('selecionado')) {
-            dessertOrder = desserts[i].getElementsByTagName('div')[1].innerHTML;
-            dessertPrice = desserts[i].getElementsByTagName('div')[3].querySelector('.price').innerHTML;
+            dessertOrder = desserts[i].getElementsByTagName('div')[0].getElementsByTagName('div')[1].innerHTML;
+            dessertPrice = desserts[i].getElementsByTagName('div')[0].getElementsByTagName('div')[5].innerHTML;
+
         }
     }
 }
@@ -212,6 +215,7 @@ Endereço: ${personalAddress}`;
     let whatsapp = "https://wa.me/5581999252520?text=" + orderEncoded;
     window.open(whatsapp, '_blank').focus();
 }
+
 function askPersonalInfo(){
     let temp = document.querySelector('.personal-info')
     temp.classList.remove('hidden')
